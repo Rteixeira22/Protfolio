@@ -1,0 +1,531 @@
+body {
+    margin: 0;
+    font-size: 14px;
+    color: #F3F9F8;
+    background-color: #161616;
+    width: 100vw;
+    margin: auto;
+}
+
+
+
+.work-request--options {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.svg-item {
+    width: calc(33.33% - 20px); /* Ajuste para considerar o espaço entre os itens */
+    max-width: 300px; /* Defina a largura máxima dos gráficos */
+    margin-bottom: 20px; /* Espaçamento entre os gráficos */
+}
+
+@media (max-width: 1000px) {
+    .svg-item {
+        width: calc(50% - 20px); /* Ajuste para dois gráficos por linha */
+    }
+}
+
+
+@media (max-width: 600px) {
+    .work-request--options {
+        flex-direction: column; /* Altera a direção do flex container para uma coluna */
+    }
+
+    .svg-item {
+        width: calc(100% - 20px); /* Ajuste para um gráfico por linha */
+    }
+}
+
+.svg-item {
+    width: 100%;
+    min-width: 150px;
+    font-size: 16px;
+    margin: 0 auto;
+    animation: donutfade 1s;
+}
+
+@keyframes donutfade {
+    /* this applies to the whole svg item wrapper */
+    0% {
+        opacity: .2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .svg-item {
+        width: 80%;
+    }
+}
+
+
+
+.donut-ring {
+    stroke: #bbbbbb;
+}
+
+.donut-segment {
+    transform-origin: center;
+    stroke: #FF6200;
+}
+
+.donut-segment-2 {
+    stroke: #0f33ff;
+    animation: donut1 3s;
+}
+
+.donut-segment-3 {
+    stroke: #FF6200;
+    animation: donut2 3s;
+}
+
+.donut-segment-4 {
+    stroke: #FFD700;
+    animation: donut3 3s;
+}
+
+.donut-segment-5 {
+    stroke: #00FFFF;
+    animation: donut4 3s;
+}
+
+.donut-segment-6 {
+    stroke: #FF1493;
+    animation: donut5 3s;
+}
+
+.donut-segment-7 {
+    stroke: #32CD32;
+    animation: donut6 3s;
+}
+
+.segment-1{fill:#ccc;}
+.segment-2{fill:#0f33ff;}
+.segment-3{fill:#FF6200;}
+.segment-4{fill:#FFD700;}
+.segment-5{fill:#00FFFF;}
+.segment-6{fill:#FF1493;}
+.segment-7{fill:#32CD32;}
+
+.donut-percent {
+    animation: donutfadelong 1s;
+}
+
+@keyframes donutfadelong {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes donut1 {
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+    100% {
+        stroke-dasharray: 90, 10;
+    }
+}
+
+@keyframes donut2 {
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+    100% {
+        stroke-dasharray: 70, 30;
+    }
+}
+
+@keyframes donut3{
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+    100% {
+        stroke-dasharray: 65, 35;
+    }
+}
+
+@keyframes donut4{
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+    100% {
+        stroke-dasharray: 75, 25;
+    }
+}
+
+@keyframes donut5{
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+    100% {
+        stroke-dasharray: 80, 20;
+    }
+}
+
+@keyframes donut6{
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+    100% {
+        stroke-dasharray: 85, 15;
+    }
+}
+
+.donut-text {
+    font-family: Montserrat, sans-serif;
+    fill: #FF6200;
+}
+.donut-text-1 {
+    fill: #0f33ff;
+}
+.donut-text-2 {
+    fill: #FF6200;
+}
+.donut-text-3 {
+    fill: #FFD700;
+}
+.donut-text-4 {
+    fill: #00FFFF;
+}
+.donut-text-5 {
+    fill: #FF1493;
+}
+.donut-text-6 {
+    fill: #32CD32;
+}
+
+
+.donut-label {
+    font-size: 0.28em;
+    font-weight: 700;
+    line-height: 1;
+    fill: #000;
+    transform: translateY(0.25em);
+}
+
+.donut-percent {
+    font-size: 0.5em;
+    line-height: 1;
+    transform: translateY(0.5em);
+    font-weight: bold;
+}
+
+.donut-data {
+    font-size: 0.17em;
+    line-height: 1;
+    transform: translateY(0.5em);
+    text-align: center;
+    text-anchor: middle;
+    color:#fff;
+    fill: #fff;
+    animation: donutfadelong 1s;
+}
+
+.donut-hole {
+    fill: #222222;
+}
+
+
+/* ---------- */
+/* just for this presentation */
+.svg-item {
+    max-width:30%;
+    display:inline-block;
+}
+
+@media (min-width: 900px) {
+    .svg-item {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .svg-item {
+        margin: 10px;
+        max-width:25%;
+
+    }
+}
+
+
+
+.modal_projetos {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top - um valor alto para garantir que esteja acima de outros elementos */
+    left: 50%; /* Posicione 50% do caminho da esquerda */
+    top: 50%; /* Posicione 50% do caminho do topo */
+    transform: translate(-50%, -60%); /* Translate para centralizar */
+    width: 75vw; /* Full width */
+    height: 75vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0); /* Fallback color with transparency */
+    align-items: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Adiciona uma sombra clara */
+    border-radius: 5px;
+    padding-bottom: 2em;
+}
+
+
+
+/* Modal Content */
+.modal-content {
+    background-color: #000;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+    height: 80%;
+    align-items: center;
+    color: white;
+}
+
+.modal-content img {
+    width: 100%; /* largura total da imagem */
+    height: 100%; /* altura total da imagem */
+    object-fit: contain; 
+    display: block; /* Garante que a imagem não quebre o layout do modal */
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .modal_projetos {
+        width: 80vw; /* Full width */
+        height: 60vh; /* Full height */
+    }
+
+    .modal-content img {
+        width: 100%; /* largura total da imagem */
+        height: 100%; /* altura total da imagem */
+        object-fit: contain; 
+        display: block; /* Garante que a imagem não quebre o layout do modal */
+        text-align: center;
+    }
+
+    
+
+
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.slider {
+    z-index: 999; /* Certifique-se de que o carrossel tenha um valor de z-index menor do que o modal */
+}
+
+.slider--item-image {
+    z-index: 8; /* Certifique-se de que o carrossel tenha um valor de z-index menor do que o modal */
+}
+
+.slider--item {
+    z-index: 8; /* Certifique-se de que o carrossel tenha um valor de z-index menor do que o modal */
+}
+
+
+.mySlides {
+    display: none;
+    text-align: center;
+}
+
+.mySlides img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    max-height: 100%; /* Garante que a imagem não ultrapasse a altura do container */
+    margin: auto; /* Centraliza a imagem horizontalmente */
+    display: block; /* Remove qualquer margem extra */
+}
+
+
+
+
+.modal_img {
+    vertical-align: middle;
+}
+
+.modal-content img {
+    max-width: 100%; /* Define o tamanho máximo das imagens como 100% da largura do modal */
+    height: 40vh; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem não quebre o layout do modal */
+    text-align: center;
+}
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: #161616;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+
+.fechar {
+    text-align: right;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.linguagens{
+    font-style: italic ;
+    font-size: 0.8em;
+    color: #717171;
+    padding-bottom: 2em;
+}
+
+.verMais {
+    color: #0f33ff;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+    .intro p {
+        width: 50%;
+    }
+    
+}
+
+.img_logo {
+    width: 4%;
+    border-radius: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .img_logo {
+        width: 10%;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .img_logo {
+        width: 8%;
+    }
+    
+}
+
+@media screen and (max-width: 1180px) {
+    .img_logo {
+        width: 6%;
+    }
+    
+}
+
+.about_img {
+    max-width: 511px;
+    max-height: 463px;;
+    object-fit: cover;
+}

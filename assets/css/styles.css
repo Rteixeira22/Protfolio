@@ -148,7 +148,7 @@ body {
         stroke-dasharray: 0, 100;
     }
     100% {
-        stroke-dasharray: 65, 35;
+        stroke-dasharray: 75, 25;
     }
 }
 

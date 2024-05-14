@@ -121,3 +121,4 @@ input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-ou
     margin-right: 1em;
 }
 
+.titulo_pagina h2{position:relative;font-size:45px;font-weight:900;line-height:1;z-index:1; text-align: left;}

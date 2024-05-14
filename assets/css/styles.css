@@ -65,10 +65,6 @@ body {
 
 
 
-.donut-ring {
-    stroke: #bbbbbb;
-}
-
 .donut-segment {
     transform-origin: center;
     stroke: #FF6200;
@@ -230,7 +226,7 @@ body {
 }
 
 .donut-hole {
-    fill: #222222;
+    fill: #161616;
 }
 
 

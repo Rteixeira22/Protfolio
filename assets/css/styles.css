@@ -525,3 +525,30 @@ body {
     max-height: 463px;;
     object-fit: cover;
 }
+
+.colunas {
+    text-align: left;
+}
+
+@media screen and (min-width: 1200px) {
+    .colunas {
+        column-count: 3;
+        column-gap: 20px;
+    }
+}
+
+/* Estilo para telas médias */
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+    .colunas {
+        column-count: 2;
+        column-gap: 20px;
+    }
+}
+
+/* Estilo para telas pequenas */
+@media screen and (max-width: 767px) {
+    .colunas {
+        column-count: 1;
+        column-gap: 0; /* Não há espaçamento entre as colunas em telas pequenas */
+    }
+}

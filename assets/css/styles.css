@@ -16,218 +16,6 @@ body {
     justify-content: space-between;
 }
 
-.svg-item {
-    width: calc(33.33% - 20px); /* Ajuste para considerar o espaço entre os itens */
-    max-width: 300px; /* Defina a largura máxima dos gráficos */
-    margin-bottom: 20px; /* Espaçamento entre os gráficos */
-}
-
-@media (max-width: 1000px) {
-    .svg-item {
-        width: calc(50% - 20px); /* Ajuste para dois gráficos por linha */
-    }
-}
-
-
-@media (max-width: 600px) {
-    .work-request--options {
-        flex-direction: column; /* Altera a direção do flex container para uma coluna */
-    }
-
-    .svg-item {
-        width: calc(100% - 20px); /* Ajuste para um gráfico por linha */
-    }
-}
-
-.svg-item {
-    width: 100%;
-    min-width: 150px;
-    font-size: 16px;
-    margin: 0 auto;
-    animation: donutfade 1s;
-}
-
-@keyframes donutfade {
-    /* this applies to the whole svg item wrapper */
-    0% {
-        opacity: .2;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@media (min-width: 992px) {
-    .svg-item {
-        width: 80%;
-    }
-}
-
-
-
-.donut-segment {
-    transform-origin: center;
-    stroke: #FF6200;
-}
-
-.donut-segment-2 {
-    stroke: #0f33ff;
-    animation: donut1 3s;
-}
-
-.donut-segment-3 {
-    stroke: #FF6200;
-    animation: donut2 3s;
-}
-
-.donut-segment-4 {
-    stroke: #FFD700;
-    animation: donut3 3s;
-}
-
-.donut-segment-5 {
-    stroke: #00FFFF;
-    animation: donut4 3s;
-}
-
-.donut-segment-6 {
-    stroke: #FF1493;
-    animation: donut5 3s;
-}
-
-.donut-segment-7 {
-    stroke: #32CD32;
-    animation: donut6 3s;
-}
-
-.segment-1{fill:#ccc;}
-.segment-2{fill:#0f33ff;}
-.segment-3{fill:#FF6200;}
-.segment-4{fill:#FFD700;}
-.segment-5{fill:#00FFFF;}
-.segment-6{fill:#FF1493;}
-.segment-7{fill:#32CD32;}
-
-.donut-percent {
-    animation: donutfadelong 1s;
-}
-
-@keyframes donutfadelong {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes donut1 {
-    0% {
-        stroke-dasharray: 0, 100;
-    }
-    100% {
-        stroke-dasharray: 90, 10;
-    }
-}
-
-@keyframes donut2 {
-    0% {
-        stroke-dasharray: 0, 100;
-    }
-    100% {
-        stroke-dasharray: 70, 30;
-    }
-}
-
-@keyframes donut3{
-    0% {
-        stroke-dasharray: 0, 100;
-    }
-    100% {
-        stroke-dasharray: 75, 25;
-    }
-}
-
-@keyframes donut4{
-    0% {
-        stroke-dasharray: 0, 100;
-    }
-    100% {
-        stroke-dasharray: 75, 25;
-    }
-}
-
-@keyframes donut5{
-    0% {
-        stroke-dasharray: 0, 100;
-    }
-    100% {
-        stroke-dasharray: 80, 20;
-    }
-}
-
-@keyframes donut6{
-    0% {
-        stroke-dasharray: 0, 100;
-    }
-    100% {
-        stroke-dasharray: 85, 15;
-    }
-}
-
-.donut-text {
-    font-family: Montserrat, sans-serif;
-    fill: #FF6200;
-}
-.donut-text-1 {
-    fill: #0f33ff;
-}
-.donut-text-2 {
-    fill: #FF6200;
-}
-.donut-text-3 {
-    fill: #FFD700;
-}
-.donut-text-4 {
-    fill: #00FFFF;
-}
-.donut-text-5 {
-    fill: #FF1493;
-}
-.donut-text-6 {
-    fill: #32CD32;
-}
-
-
-.donut-label {
-    font-size: 0.28em;
-    font-weight: 700;
-    line-height: 1;
-    fill: #000;
-    transform: translateY(0.25em);
-}
-
-.donut-percent {
-    font-size: 0.5em;
-    line-height: 1;
-    transform: translateY(0.5em);
-    font-weight: bold;
-}
-
-.donut-data {
-    font-size: 0.17em;
-    line-height: 1;
-    transform: translateY(0.5em);
-    text-align: center;
-    text-anchor: middle;
-    color:#fff;
-    fill: #fff;
-    animation: donutfadelong 1s;
-}
-
-.donut-hole {
-    fill: #161616;
-}
 
 
 /* ---------- */
@@ -533,3 +321,62 @@ body {
         column-gap: 0; /* Não há espaçamento entre as colunas em telas pequenas */
     }
 }
+
+.skills-logos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.span-logos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+
+.skills-logos img {
+    width: 40%;
+    max-width: 150px;
+    margin-bottom: auto; 
+}
+
+
+@media (max-width: 600px) {
+    .skills-logos {
+        width: 30%;
+    }
+
+    .about {
+        height: 140%;
+    }
+}
+
+@media (min-width: 600px) {
+    .skills-logos {
+        width: 25%;
+    }
+}
+
+@media (min-width: 900px) {
+    .skills-logos {
+        width: 20%;
+    }
+    .hire{
+        width: 800px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .skills-logos {
+        width: 20%;
+    }
+     
+    .hire{
+        width: 900px;
+    }
+}
+

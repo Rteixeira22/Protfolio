@@ -344,6 +344,11 @@ body {
     margin-bottom: auto; 
 }
 
+.skills-logos h3 {
+    border-bottom: 3px solid #0f33ff; 
+    border-radius: 20%;
+    padding: 3%;
+}
 
 @media (max-width: 600px) {
     .skills-logos {

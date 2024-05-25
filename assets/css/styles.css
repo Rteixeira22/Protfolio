@@ -386,3 +386,18 @@ body {
     }
 }
 
+
+
+@media (max-width: 375px) {
+    .about--banner h2 {
+        display: none;
+    }
+
+    .hire h2 {
+        display: none;
+    }
+
+    .work h2 {
+        display: none;
+    }
+}

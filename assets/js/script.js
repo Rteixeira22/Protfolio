@@ -6,6 +6,7 @@ var modal2 = document.getElementById("myModal2");
 var modal3 = document.getElementById("myModal3");
 var modal4 = document.getElementById("myModal4");
 var modal5 = document.getElementById("myModal5");
+var modal6 = document.getElementById("myModal6");
 
 // Get the button that opens the modal
 var btn1 = document.getElementById("myBtn1");
@@ -13,6 +14,7 @@ var btn2 = document.getElementById("myBtn2");
 var btn3 = document.getElementById("myBtn3");
 var btn4 = document.getElementById("myBtn4");
 var btn5 = document.getElementById("myBtn5");   
+var btn6 = document.getElementById("myBtn6");   
 
 // Get the <span> element that closes the modal
 var close1 = document.getElementById("close1");
@@ -20,6 +22,7 @@ var close2 = document.getElementById("close2");
 var close3 = document.getElementById("close3");
 var close4 = document.getElementById("close4");
 var close5 = document.getElementById("close5");
+var close6 = document.getElementById("close6");
 
 //Esconder botoes do carrossel projetos
 var slider_prev_projetos = document.getElementById("slider_prev_projetos")
@@ -58,6 +61,12 @@ btn5.onclick = function() {
     slider_next_projetos.style.display = "none"
 }
 
+btn6.onclick = function() {
+    modal6.style.display = "block";
+    slider_prev_projetos.style.display = "none";
+    slider_next_projetos.style.display = "none"
+}
+
 // When the user clicks on <span> (x), close the modal
 close1.onclick = function() {
     modal1.style.display = "none";
@@ -83,7 +92,12 @@ close5.onclick = function() {
     modal5.style.display = "none";
     slider_prev_projetos.style.display = "block";
     slider_next_projetos.style.display = "block"
+}
 
+close6.onclick = function() {
+    modal6.style.display = "none";
+    slider_prev_projetos.style.display = "block";
+    slider_next_projetos.style.display = "block"
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -106,6 +120,10 @@ window.onclick = function(event) {
         slider_next_projetos.style.display = "block"
     } else if (event.target == modal5) {
         modal5.style.display = "none";
+        slider_prev_projetos.style.display = "block";
+        slider_next_projetos.style.display = "block"
+    } else if (event.target == modal6) {
+        modal6.style.display = "none";
         slider_prev_projetos.style.display = "block";
         slider_next_projetos.style.display = "block"
     }
@@ -263,6 +281,36 @@ function showSlides5(n) {
     }
     slides5[slideIndex5-1].style.display = "block";
     dots5[slideIndex5-1].className += " active";
+}
+
+// Carousel Modal 6
+
+let slideIndex6 = 1;
+
+showSlides6(slideIndex6);
+
+function currentSlide6(n) {
+    showSlides6(slideIndex6 = n);
+}
+
+function plusSlides6(n) {
+    showSlides6(slideIndex6 += n)
+}
+
+function showSlides6(n) {
+    let i;
+    let slides6 = document.getElementsByClassName("mySlides6");
+    let dots6 = document.getElementsByClassName("dot6");
+    if (n > slides6.length) {slideIndex6 = 1}
+    if (n < 1) {slideIndex6 = slides6.length}
+    for (i = 0; i < slides6.length; i++) {
+        slides6[i].style.display = "none";
+    }
+    for (i = 0; i < dots6.length; i++) {
+        dots6[i].className = dots6[i].className.replace(" active", "");
+    }
+    slides6[slideIndex6-1].style.display = "block";
+    dots6[slideIndex6-1].className += " active";
 }
 
 
